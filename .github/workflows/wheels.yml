@@ -51,6 +51,11 @@ jobs:
         with:
           submodules: true
 
+      - name: Get CMake
+        uses: lukka/get-cmake@latest
+        with:
+          cmakeVersion: ~3.22
+
       - uses: pypa/cibuildwheel@v3.2.0
 
       - name: Verify clean directory
