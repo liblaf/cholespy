@@ -28,6 +28,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install libblas-dev liblapack-dev
 
+      - name: Get CMake
+        uses: lukka/get-cmake@latest
+        with:
+          cmakeVersion: ~3.22
+
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
